@@ -1,7 +1,7 @@
 '''
 Author: 零到正无穷
 Date: 2021-01-31 19:51:47
-LastEditTime: 2021-02-03 16:30:26
+LastEditTime: 2021-02-03 16:05:19
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: \TensorFlow\IMDB_Test.py
@@ -44,12 +44,11 @@ y_val = y_train[:10000]
 partial_y_train = y_train[10000:]
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
-history = model.fit(partial_x_train,partial_y_train,epochs=20,batch_size=512,validation_data=(x_val, y_val))   
+history = model.fit(partial_x_train,partial_y_train,epochs=50,batch_size=512,validation_data=(x_val, y_val))   
 
-# model.predict(x_test)
+model.predict(x_test)
 
 history_dict = history.history
-# print(history_dict.keys())
 loss_values = history_dict['loss']
 val_loss_values = history_dict['val_loss']
 
@@ -65,8 +64,8 @@ plt.legend()
 plt.show()
 
 plt.clf()
-acc = history_dict['accuracy']
-val_acc = history_dict['val_accuracy']
+acc = history_dict['acc']
+val_acc = history_dict['val_acc']
 
 plt.plot(epochs, acc, 'bo', label = 'Training acc')
 plt.plot(epochs, val_acc, 'b', label = 'Valudation acc')

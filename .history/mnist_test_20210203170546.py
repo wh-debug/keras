@@ -1,11 +1,3 @@
-'''
-Author: your name
-Date: 2021-01-28 20:39:42
-LastEditTime: 2021-02-03 17:05:47
-LastEditors: your name
-Description: In User Settings Edit
-FilePath: \TensorFlow\mnist_test.py
-'''
 from keras.datasets import mnist
 from keras import models
 from keras import layers

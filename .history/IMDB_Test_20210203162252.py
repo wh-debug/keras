@@ -1,7 +1,7 @@
 '''
 Author: 零到正无穷
 Date: 2021-01-31 19:51:47
-LastEditTime: 2021-02-03 16:30:26
+LastEditTime: 2021-02-03 16:22:52
 LastEditors: Please set LastEditors
 Description: In User Settings Edit
 FilePath: \TensorFlow\IMDB_Test.py
@@ -49,31 +49,31 @@ history = model.fit(partial_x_train,partial_y_train,epochs=20,batch_size=512,val
 # model.predict(x_test)
 
 history_dict = history.history
-# print(history_dict.keys())
-loss_values = history_dict['loss']
-val_loss_values = history_dict['val_loss']
+print(history_dict.keys())
+# loss_values = history_dict['loss']
+# val_loss_values = history_dict['val_loss']
 
-epochs = range(1, len(loss_values) + 1)
+# epochs = range(1, len(loss_values) + 1)
 
-plt.plot(epochs, loss_values, 'bo', label='Train loss')
-plt.plot(epochs, val_loss_values, 'b', label='Validation loss')
-plt.title('Training and validation loss')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.legend()
+# plt.plot(epochs, loss_values, 'bo', label='Train loss')
+# plt.plot(epochs, val_loss_values, 'b', label='Validation loss')
+# plt.title('Training and validation loss')
+# plt.xlabel('Epochs')
+# plt.ylabel('Loss')
+# plt.legend()
 
-plt.show()
+# plt.show()
 
-plt.clf()
-acc = history_dict['accuracy']
-val_acc = history_dict['val_accuracy']
+# plt.clf()
+# acc = history_dict['acc']
+# val_acc = history_dict['val_acc']
 
-plt.plot(epochs, acc, 'bo', label = 'Training acc')
-plt.plot(epochs, val_acc, 'b', label = 'Valudation acc')
-plt.title('Training and validation accuracy')
-plt.xlabel('Epochs')
-plt.ylabel('Accuracy')
-plt.legend()
+# plt.plot(epochs, acc, 'bo', label = 'Training acc')
+# plt.plot(epochs, val_acc, 'b', label = 'Valudation acc')
+# plt.title('Training and validation accuracy')
+# plt.xlabel('Epochs')
+# plt.ylabel('Accuracy')
+# plt.legend()
 
-plt.show()
+# plt.show()
 
