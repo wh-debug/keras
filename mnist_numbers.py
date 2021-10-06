@@ -20,5 +20,7 @@ test_image = test_image.astype('float32') / 255
 train_labels = to_categorical((train_labels))
 teat_labels = to_categorical(teat_labels)
 
-network.fit(train_image, train_labels, epochs=5, batch_size=128)
+network.fit(train_image, train_labels, epochs=100, batch_size=128)
+test_loss, test_acc = network.evaluate(test_image, teat_labels)
+print('test_acc: ', test_acc)
 
